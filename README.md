@@ -70,3 +70,26 @@ AUTH_SECRET=my secret here
 /apps/*
 !/apps/builder
 ```
+
+### Setup submodule
+
+- create new github repo
+- push apps/<project name> content to new repo
+- in root level run `git submodule add -f <repo url> ./apps/<project dir>`
+- push the changes to your parent repo's proejct branch
+
+### git submodule update workflow
+
+```
+cd <submodule_path>
+# Make and push changes to the submodule
+git add .
+git commit -m "Update submodule"
+git push
+
+cd ..
+# Update parent repository to point to the new submodule commit
+git add <submodule_path>
+git commit -m "Update submodule reference"
+git push
+```
