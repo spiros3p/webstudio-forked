@@ -2,3 +2,6 @@
 	path = packages/sdk-components-animation/private-src
 	url = git@github.com:webstudio-is/sdk-components-animation.git
 	branch = main
+[submodule "apps/freb-website"]
+	path = apps/freb-website
+	url = https://github.com/Freddo-Espresso-Buddy/freb-website.git
