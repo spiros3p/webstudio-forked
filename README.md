@@ -93,3 +93,9 @@ git add <submodule_path>
 git commit -m "Update submodule reference"
 git push
 ```
+
+### Webstudio builder project update workflow
+
+- after completing modifications in the UI builder, click **PUBLISH**
+- in the app repo, run `npx webstudio sync`, `npx webstudio --template docker`
+- push your changes
