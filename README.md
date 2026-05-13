@@ -1,6 +1,3 @@
-<img width="1512" alt="builder-screenshot" src="https://github.com/webstudio-is/.github/blob/main/assets/builder-screenshot.png?raw=true">
-<br /><br />
-
 <section align="center">
   Webstudio is an Open Source Visual Development Platform for developers, designers, and cross-functional teams. You own the data, components, and infrastructure. You can use the hosted version or roll out your own.
 </section>
@@ -33,3 +30,43 @@ Thanks to [Lost Pixel](https://www.lost-pixel.com/) for providing the visual tes
 
 - **Webstudio core** (all functionality in this repository) is free/open-source under AGPL-3.0-or-later.
 - **sdk-components-animation** package (optional) is proprietary. You must accept the Webstudio, Inc. EULA located in [sdk-components-animation/LICENSE](./packages/sdk-components-animation/LICENSE) before using it.
+
+## Custom instructions
+
+### Init builder locally
+
+- open the repo in devcointainer (vscode extension)
+- wait for the process to complete
+- create `apps/builder/.env.development` and add:
+
+```
+DEV_LOGIN=true
+AUTH_SECRET=my secret here
+```
+
+- run `pnpm dev`
+- access `https://wstd.dev:5173/` locally (vite link encounters https issues)
+
+### Create new project and serve it with Docker
+
+- in the webstudio dashboard, create new project
+- in the project, click "Share" button and provide builder permissions
+- copy the link
+- cd into `./apps/<project name dir>` (create it if not already exists)
+- in the vs code terminal run `npx webstudio link`
+- paste the shared link in the prompt
+- in the vs code terminal run `npx webstudio sync`
+- in the webstudio UI project, click publish for the project
+- in the vs code terminal run `npx webstudio`
+- choose docker
+- all project app related files should be created inside your child directory
+
+<hr>
+***consider not uploading these files in the parent repo or branch***
+
+- add to `.gitingore`
+
+```
+/apps/*
+!/apps/builder
+```
