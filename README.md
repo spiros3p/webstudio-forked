@@ -53,11 +53,11 @@ AUTH_SECRET=my secret here
 - in the project, click "Share" button and provide builder permissions
 - copy the link
 - cd into `./apps/<project name dir>` (create it if not already exists)
-- in the vs code terminal run `npx webstudio link`
+- in the vs code terminal run `npx webstudio@0.267.0 link`
 - paste the shared link in the prompt
-- in the vs code terminal run `npx webstudio sync`
+- in the vs code terminal run `npx webstudio0.267.0 sync`
 - in the webstudio UI project, click publish for the project
-- in the vs code terminal run `npx webstudio`
+- in the vs code terminal run `npx webstudio0.267.0`
 - choose docker
 - all project app related files should be created inside your child directory
 
