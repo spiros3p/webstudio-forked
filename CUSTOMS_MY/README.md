@@ -41,9 +41,10 @@ AUTH_SECRET=my secret here
 ### Setup submodule
 
 - create new github repo
-- push apps/<project name> content to new repo
+- cd apps/<project-name>
+- git init && git remote add origin <link> && git branch -M main && git add . && git commit -m "first commit" && git push -u origin main
 - in root level run `git submodule add -f <repo url> ./apps/<project dir>`
-- push the changes to your parent repo's proejct branch
+- push the changes to your parent repo's project branch
 
 ### git submodule update workflow
 

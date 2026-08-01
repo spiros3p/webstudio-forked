@@ -5,3 +5,6 @@
 [submodule "apps/freb-website"]
 	path = apps/freb-website
 	url = https://github.com/Freddo-Espresso-Buddy/freb-website.git
+[submodule "apps/numa-private-transfers"]
+	path = apps/numa-private-transfers
+	url = https://github.com/spiros3p/numa-private-transfers-page.git
